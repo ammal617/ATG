@@ -40,6 +40,7 @@ export default class GameType extends React.Component {
         <GameTypeForm getSearch={this.getResult} />
         {this.state.error?(<h3>Invalid input please choose between V75, V65, V64, V4</h3>):(<div/>)}
         <div>
+          {this.state.isLoading?(<div style={{marginLeft:'47%', marginTop:'5%'}}><ReactLoading type={"spin"} color={"red"} height={100} /> </div>):(<div/>)}
           {this.state.gameType ? (
             <div>
               <p>{this.state.gameType} </p>
